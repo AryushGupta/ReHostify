@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="./output.css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/dbf8d0490c.js" crossorigin="anonymous"></script>
+    <!--ion-icons  -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- changing the color of the ionicons -->
+    <style>
+        ion-icon {
+          color: white;
+          font-size: 1.8rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="w-full h-32 md:h-20 flex flex-col items-center justify-center px-3 space-y-6 md:flex md:flex-row md:items-center md:justify-around md:space-y-0 bg-slate-950">
@@ -20,7 +30,7 @@
                 <li class="mx-3"><a href="">Contact Us</a></li>
             </ul>
         </div>
-        <div class="w-4/5 md:w-1/4">
+        <div class="w-4/5 md:w-1/5">
             <form action="">
                 <div class="flex w-full border border-gray-300 rounded-md bg-white outline outline-indigo-600">
                     <input type="text" class="w-5/6 md:w-11/12 px-3 mx-1 outline-none rounded-l-md py-1 text-sm font-semibold text-indigo-900 md:px-2 md:py-2" placeholder="Enter your product name...">
@@ -29,9 +39,52 @@
             </form>
         </div>
     </nav>
-    <!-- hero section -->
-    <section class="">
 
-    </section>
+    <!-- mobile-menu here -->
+    <div class="md:hidden fixed top-0 right-0 h-full bg-slate-950 w-32 bg-gradient-to-tr from-slate-600 to-slate-950" id="mobile-menu">
+        <ul class="pt-10 space-y-8 mx-auto font-semibold tracking-wide text-gray-300 text-sm text-center backdrop-blur-sm">
+            <div class="mx-6">
+                <a href="./about-us.html" class="group transition duration-300">
+                    Home
+                    <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-px bg-sky-600 mt-2"></span>
+                </a>
+            </div>
+            <div class="mx-6">
+                <a href="./about-us.html" class="group transition duration-300">
+                    About
+                    <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-px bg-sky-600 mt-2"></span>
+                </a>
+            </div>
+            <div class="mx-6">
+                <a href="./about-us.html" class="group transition duration-300">
+                    Contact Us
+                    <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-px bg-sky-600 mt-2"></span>
+                </a>
+            </div>
+        </ul>
+    </div>
+    <!-- button to view mobile view -->
+    <button class="md:hidden fixed bottom-5 right-5" onclick="onToggleMenu()" id="toggle-btn">
+        <ion-icon name="menu" id="ion-btn"></ion-icon>
+    </button>
+
+
+    <!-- hero section -->
+    <!-- <section class="">
+        <div class="flex items-center ">
+            <ul class="flex items-center space-x-7">
+                <li>
+                    <a href=""><ion-icon name="person-outline"></ion-icon></a>
+                </li>
+                <li>
+                    <a href=""><ion-icon name="heart-outline"></ion-icon></a>
+                </li>
+                <li>
+                    <a href=""><ion-icon name="bag-handle-outline"></ion-icon></a>
+                </li>
+            </ul>
+        </div>
+    </section> -->
+    <script src="../script.js"></script>
 </body>
 </html>
